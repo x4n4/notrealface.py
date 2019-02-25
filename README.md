@@ -2,7 +2,8 @@
 Get random virtual face from thispersondoesnotexists.com and thiscatdoesnotexit.com
 
 # How to use
-```usage: notrealface.py [-h] [--type {human,cat}] [--nb NB] [--path PATH]
+```sh
+usage: notrealface.py [-h] [--type {human,cat}] [--nb NB] [--path PATH]
 
 optional arguments:
   -h, --help          show this help message and exit
@@ -14,12 +15,12 @@ optional arguments:
 # Examples
 
 ### Generate one human face in current directory:
-```
+```sh
 x4n4@ares:~/randomDir$ python3 notrealface.py
 ```
 
 ### Set optional args for total liberty:
-```
+```sh
 x4n4@ares:~/randomDir$ ls
 notrealface.py
 x4n4@ares:~/randomDir$ mkdir data
@@ -33,7 +34,7 @@ face-13.jpeg  face-18.jpeg  face-22.jpeg  face-27.jpeg  face-31.jpeg  face-36.jp
 ```
 
 ### There are default value for each parameters, nothing is mandatory:
-```bash
+```sh
 x4n4@ares:~/randomDir$ python3 notrealface.py --nb=2
 x4n4@ares:~/randomDir$ ls
 data  face-0.jpeg  face-1.jpeg  notrealface.py

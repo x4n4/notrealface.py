@@ -3,19 +3,11 @@ import argparse
 import requests
 import time
 
-""" Get random virtual face from thispersondoesnotexists.com and thiscatdoesnotexit.com
-
-usage: notrealface.py [-h] [--type {human,cat}] [--nb NB] [--path PATH]
-
-optional arguments:
-  -h, --help          show this help message and exit
-  --type {human,cat}  type of face (default is 'human')
-  --nb NB             number of faces to generate (default is '1')
-  --path PATH         where to save the images (default is './')
-
+"""
+usage: notrealface.py [-h] [--type (human,cat,art,horse] [--nb NB] [--path PATH]
 """
 
-URL = {"human": "https://thispersondoesnotexist.com/image", "cat": "https://thiscatdoesnotexist.com/"}
+URL = {"human": "https://thispersondoesnotexist.com/image", "cat": "https://thiscatdoesnotexist.com/", "art": "https://thisartworkdoesnotexist.com/", "horse": "https://thishorsedoesnotexist.com/"}
 
 def getface(url, nb, path):
     """ Download [nb] faces from [url] and save it in [path] """
@@ -33,7 +25,7 @@ def getface(url, nb, path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--type", type=str, default="human", choices=["human", "cat"], help="type of face (default is 'human')")
+    parser.add_argument("--type", type=str, default="human", choices=["human", "cat", "art", "horse"], help="type of face (default is 'human')")
     parser.add_argument("--nb", type=int, default=1, help="number of faces to generate (default is '1')")
     parser.add_argument("--path", type=str, default="./", help="where to save the images (default is './')")
     args = parser.parse_args()

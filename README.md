@@ -1,15 +1,17 @@
 # notrealface.py
-Get random virtual face from thispersondoesnotexists.com and thiscatdoesnotexit.com
+Get random virtual face from https://thispersondoesnotexist.com/image , https://thiscatdoesnotexist.com/ , https://thisartworkdoesnotexist.com/ and https://thishorsedoesnotexist.com/
+
 
 # How to use
 ```sh
-usage: notrealface.py [-h] [--type {human,cat}] [--nb NB] [--path PATH]
+
+usage: notrealface.py [-h] [--type (human,cat,art,horse)] [--nb NB] [--path PATH]
 
 optional arguments:
-  -h, --help          show this help message and exit
-  --type {human,cat}  type of face (default is 'human')
-  --nb NB             number of faces to generate (default is '1')
-  --path PATH         where to save the images (default is './')
+  -h, --help    show this help message and exit
+  --type        type of face (default is 'human')
+  --nb          number of faces to generate (default is '1')
+  --path        where to save the images (default is './')
 ```
 
 # Examples
